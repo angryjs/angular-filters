@@ -12,6 +12,15 @@
 
         return input;
       };
-    });
+    })
+
+    .filter('join', function () {
+      return function (array, glue) {
+        glue = glue || ', ';
+        return array.join(glue);
+      };
+    })
+
+  ;
 
 })(window.angular);
